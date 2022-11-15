@@ -21,6 +21,9 @@ class CookieBannerContent extends React.Component {
       savePreferencesButtonText = 'Save and close',
       onConfirm = () => {},
       onAcceptAll = () => {},
+      showDeclineButton = false,
+      declineButtonText = 'Decline all',
+      onDecline = () => {},
     } = this.props;
 
     const { showPreferences } = this.state;
@@ -85,6 +88,12 @@ class CookieBannerContent extends React.Component {
             >
               <span>{acceptButtonText}</span>
             </button>
+            { 
+              showDeclineButton && (
+              <button type="button" className="react-cookie-law-accept-btn react-cookie-law-btn" style={buttonStyle} onClick={() => onDecline()}>
+                <span>{declineButtonText}</span>
+              </button>
+            )}
           </div>
         </div>
       </div>

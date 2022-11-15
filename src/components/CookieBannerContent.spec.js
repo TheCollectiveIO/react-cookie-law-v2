@@ -26,6 +26,8 @@ describe('CookieBannerContent component', () => {
       acceptButtonText: 'Accept all',
       managePreferencesButtonText: 'Mange my cookies',
       savePreferencesButtonText: 'Save and close',
+      declineButtonText: 'Decline all',
+      
     };
 
     const component = mount(
