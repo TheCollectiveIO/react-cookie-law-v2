@@ -1,17 +1,17 @@
 {
-  "name": "@palmabit/react-cookie-law",
-  "version": "0.7.0",
-  "description": "React Cookie banner GDPR compliance",
-  "author": "Alessandro Sarzina <a.sarzina@palmabit.com>",
+  "name": "@TheCollectiveIO/react-cookie-law-v2",
+  "version": "0.7.1",
+  "description": "React Cookie banner GDPR compliance with Deny Button Working. Fork of Palmabit-IT/react-cookie-law.git",
+  "author": "Reed <reed@thecollective.io>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Palmabit-IT/react-cookie-law.git"
+    "url": "https://github.com/TheCollectiveIO/react-cookie-law-v2.git"
   },
   "bugs": {
-    "url": "https://github.com/Palmabit-IT/react-cookie-law/issues"
+    "url": "https://github.com/TheCollectiveIO/react-cookie-law-v2/issues"
   },
-  "homepage": "https://github.com/Palmabit-IT/react-cookie-law#readme",
+  "homepage": "https://github.com/TheCollectiveIO/react-cookie-law-v2#readme",
   "keywords": [
     "gdpr",
     "cookie",
