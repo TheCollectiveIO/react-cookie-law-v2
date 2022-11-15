@@ -11,6 +11,8 @@ import {
   saveCoryphaPreferences,
   checkVersionCoryphaPreferences,
 } from '../coryphaAPI';
+import { getExpirationDate } from '../helpers';
+
 
 const CORYPHA_USER = 'rl_corypha_user';
 const CONSENT_GIVEN = 'rcl_consent_given';
@@ -223,6 +225,8 @@ class CookieBanner extends React.Component {
   }
 
   decline() {
+    console.log('decline');
+    const expires = getExpirationDate();
     const {
       onDeclinePreferences = () => {},
       onDeclineStatistics = () => {},
@@ -233,7 +237,7 @@ class CookieBanner extends React.Component {
     const { coryphaPreferences = [] } = this.state;
 
     if (isUsingCorypha(this.props)) {
-      this.cookies.set(CONSENT_GIVEN);
+      this.cookies.set(CONSENT_GIVEN, false, {expires});
       this.cookies.remove(CORYPHA_USER);
 
       coryphaPreferences.forEach(({ name }) => {
@@ -242,7 +246,7 @@ class CookieBanner extends React.Component {
 
       onDeclineCoryphaPreferences(coryphaPreferences);
     } else {
-      this.cookies.set(CONSENT_GIVEN);
+      this.cookies.set(CONSENT_GIVEN, false, {expires});
       this.cookies.remove(PREFERENCES_COOKIE);
       this.cookies.remove(STATISTICS_COOKIE);
       this.cookies.remove(MARKETING_COOKIE);
